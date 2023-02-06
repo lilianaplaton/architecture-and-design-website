@@ -1,22 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat&family=Tenor+Sans&display=swap');
-@import url('https://kit.fontawesome.com/8e08c52e93.js');
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    color: #000;
-}
-
-ul li {
-    list-style-type: none;
-}
-
-
 /*_________ politica cookies  |  politica de confidentialitate  |  termeni si conditii ________*/
 
-.cookies-container h1,
+.cookies-container-div h1,
 .conf-container h1,
 .termeni-container h1 {
     font-family: 'Italiana';
@@ -27,14 +11,14 @@ ul li {
     margin: 10rem 0 4rem 0;
 }
 
-.politica-cookies,
+.politica-cookies-wrapper,
 .confidentialitate,
 .termeni-conditii {
     border-left: 20px solid #000;
     border-right: 20px solid #000;
 }
 
-.cookies-container,
+.cookies-container-div,
 .conf-container,
 .termeni-container {
     min-height: 100vh;
@@ -113,7 +97,7 @@ ul li {
 
 @media (max-width: 768px) {
     /*--politica cookies | politica de confidentialitate | termeni si conditii--*/
-    .cookies-container,
+    .cookies-container-div,
     .conf-container,
     .termeni-container {
         margin: 0 80px;
@@ -126,7 +110,7 @@ ul li {
 
 @media (max-width: 600px) {
     /*--politica cookies | politica de confidentialitate | termeni si conditii--*/
-    .cookies-container h1 {
+    .cookies-container-div h1 {
         margin: 8rem 0 2rem 0;
         font-size: 45px;
     }
@@ -137,7 +121,7 @@ ul li {
     .termeni-container h1 {
         font-size: 30px;
     }
-    .cookies-container,
+    .cookies-container-div,
     .conf-container,
     .termeni-container {
         margin: 0 35px;
