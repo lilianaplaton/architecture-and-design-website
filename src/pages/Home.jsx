@@ -1,4 +1,5 @@
 import Despre from '../components/Despre';
+import Portofoliu from '../components/Portofoliu';
 import Contact from '../components/Contact';
 
 export default function Home() {
@@ -33,6 +34,8 @@ export default function Home() {
     </section>
 
     <Despre />
+
     <Contact />
+    <Portofoliu/>
   </>
 }

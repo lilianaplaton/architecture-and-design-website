@@ -39,7 +39,25 @@ export default function ConfidentialityPolicy() {
             personal.
           </p>
         </Intrebare>
-
+<Intrebare question="II. Datele cu caracter personal">
+<p>Termenul „Date cu caracter personal” se referă la orice informații care vă privesc
+              sau prin care puteți fi identificat direct sau indirect și anume numele, prenumele,
+              numărul de telefon, adresa de e-mail, cookie-urile, adresa IP și
+              alte informații care vă permit să fiți identificat și pe care ni le furnizați în orice
+              moment.
+              <br /><br /> Prin accesarea site-ului www.vhon.ro, vizitatorii sunt de acord ca
+              utilizarea
+              site-ului să se facă pe propria lor răspundere. <b>ATELIER DE ARHITECTURA SI DESIGN
+                VHON SRL</b> nu este responsabil pentru niciun incident
+              direct sau indirect sau orice alte pierderi, costuri sau cheltuieli de orice natură
+              care pot apărea ca urmare a accesării sau navigării în site. Accesarea și/sau
+              utilizarea site-ului de către dumneavoastră constituie ACCEPTAREA
+              prezentelor Condiții si Termeni și vă obligă la respectarea acestora.
+              <br /><br /> Orice preluare a conținutului (integrală sau parțială) în alte scopuri
+              decât în interes personal este sancționată de legislația privind drepturile de
+              proprietate intelectuală.
+            </p>
+</Intrebare>
         {/* TODO transform the rest to Intrebare */}
         <div className="conf">
           <div className="question-conf">
@@ -219,5 +237,5 @@ export default function ConfidentialityPolicy() {
       </div>
     </section>
   </>
-    ;
+    
 }
