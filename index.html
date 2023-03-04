@@ -258,26 +258,65 @@
                         </div>
                     </div>
                 </form>
-                <!--contact-form-->
-                <form>
-                    <div class="contact-form">
-                        <div class="field-box">
-                            <input class="field" type="text" name="name" placeholder="Nume" required>
-                            <input class="field" type="email" name="email" placeholder="Email" required>
-                            <input class="field" type="number" name="phone" placeholder="Telefon" required>
-                            <textarea class="field" name="message" placeholder="Mesaj" required style="height: 100px;"></textarea>
+                
+                    <!--contact-form-->
+                    <form id="email-form">
+                        <div class="contact-form">
+                            <div class="field-box">
+                                <label for="email-form-name">
+                                    <input class="field" id="email-form-name" name="name" placeholder="Nume" required type="text">
+                                </label>
+                                <label for="email-form-email">
+                                    <input class="field" id="email-form-email" name="email" placeholder="Email" required type="email">
+                                </label>
+                                <label for="email-form-phone">
+                                    <input class="field" id="email-form-phone" name="phone" placeholder="Telefon" required type="number">
+                                </label>
+                                <label for="email-form-message">
+                                        <textarea class="field" id="email-form-message" name="message" placeholder="Mesaj" required
+                                                  style="height: 100px;"></textarea>
+                                </label>
+                            </div>
+                            <div class="sendbtn">
+                                <button type="submit">Trimite</button>
+                                <div class="checkbox">
+                                    <input id="check" type="checkbox">
+                                    <label for="check">Am citit și sunt de acord cu <a href="./pages/legal/politica de confidentialitate.html"
+                                                                                       target="_blank"> <b>Politica de confidențialitate</b> a site-ului.</a></label>
+                                </div>
+                            </div>
                         </div>
-                        <div class="sendbtn">
-                            <button type="submit">Trimite</button>
-                        </div>
-                        <div class="checkbox">
-                            <input type="checkbox" id="check" required>
-                            <label for="check">Am citit și sunt de acord cu <a href="pages/legal/politica de confidentialitate.html" target="_blank"> <b>Politica de confidențialitate</b> a site-ului.</a></label>
-                        </div>
-                </form>
-                </div>
+                      </form>
+                  </div>
             </div>
-    </section>
+            
+            
+           <script>
+                getFormData = (selector) => Object.fromEntries(new FormData(document.querySelector(selector)))
+                const form = document.querySelector('#email-form');
+
+                form.addEventListener('submit', async (event) => {            
+                    event.preventDefault(); // prevent default form submission
+                    const formData = getFormData('#email-form')
+
+                    try {
+                        const response = await fetch('https://47r4gejn2ngqw4gqqwuwffqdi40yitzy.lambda-url.eu-central-1.on.aws/', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(formData)
+                        })
+
+                        form.reset();
+                        location.reload()
+                    } catch (error) {
+                        console.error(error);
+                    }
+                });
+          </script>
+      
+       </section>
 
     <!--___________________________________ footer _____________________________________-->
 
