@@ -1106,7 +1106,7 @@
         
         @media(max-width: 350px) {
             #cookie {
-                height: 16%;
+                height: 18%;
                 padding: 50px 35px;
             }
             .cookie-btn button {
